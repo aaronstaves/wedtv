@@ -1,0 +1,17 @@
+{
+  "name": "wedtv",
+  "version": "0.0.0",
+  "description": "Process to grab and display wedding pictures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron Staves",
+  "license": "ISC",
+  "devDependencies": {
+    "watch": "~0.16.0",
+    "config": "~1.15.0",
+    "mongoose": "~4.1.1",
+    "log4js": "~0.6.26"
+  }
+}
