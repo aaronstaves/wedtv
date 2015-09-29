@@ -2,10 +2,13 @@ function init() {
 
 	var socket = io();
 
+	$('.main_image_wrapper img').load(function() {
+		$('.main_image_wrapper img').toggleClass('transparent');
+	});
+
 	socket.on('show image', function(msg){
-		//var img = $('div.main_image').css('background-image', 'url('+msg+')');
-		$('.main_image').attr('src', msg);
-		console.log('showing ' + msg );
+		var hidden = $('.main_image_wrapper .transparent');
+		hidden.attr('src', msg);
 	});
 }
 

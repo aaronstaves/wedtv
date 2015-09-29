@@ -11,6 +11,7 @@
   "devDependencies": {
     "config": "~1.15.0",
     "log4js": "~0.6.26",
+    "mkdirp": "^0.5.1",
     "touch": "^1.0.0",
     "watch": "~0.16.0"
   },
