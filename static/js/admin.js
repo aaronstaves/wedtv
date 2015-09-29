@@ -6,6 +6,11 @@ function init() {
 		$('.preview_image').attr('src', msg);
 	});
 
+	socket.on('slideshow current speed', function(msg){
+		var seconds = msg / 1000;
+		$('#speed'+seconds).closest('.btn').button('toggle');
+	});
+
 	socket.on('update list', updateList);
 
 	$('.photo_menu .fa-remove').on('click', function() {
@@ -14,6 +19,13 @@ function init() {
 
 	$('.photo_menu .fa-trash').click({ socket: socket }, trashPhoto);
 	$('.photo_menu .fa-arrow-circle-up').click({ socket: socket }, prioritizePhoto);
+	$('.speed .btn').click({ socket: socket }, changeSpeed);
+}
+
+function changeSpeed( e ) {
+	var btn    = $(e.target).children('input');
+	var socket = e.data.socket;
+	socket.emit('update speed', btn.val());
 }
 
 function updateList (list){

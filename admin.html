@@ -10,17 +10,50 @@
   </head>
   <body>
 
-    <div class='preview_image_wrapper'>
-      <span class='middle_helper'></span>
-      <img class='preview_image'/>
-    </div>
-
-		<div class="image_list_counter">Loading...</div>
-		<div class="container image_list">
-			<div class="row"></div>
+	<div>
+		<div class="row">
+	    <div class='preview_image_wrapper'>
+	      <span class='middle_helper'></span>
+	      <img class='preview_image'/>
+	    </div>
 		</div>
 
-		<div class="photo_menu container">
+
+		<div class="speed row">
+			<div class="btn-group" data-toggle="buttons">
+			  <label class="btn btn-primary">
+			    <input type="radio" name="speed" id="speed1" value="1"> 1 Second
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="speed" id="speed5" value="5"> 5 Seconds
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="speed" id="speed15" value="15"> 15 Seconds
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="speed" id="speed30" value="30"> 30 Seconds
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="speed" id="speed60" value="60"> 1 Minute
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="speed" id="speed120" value="120"> 2 Minutes
+			  </label>
+			  <label class="btn btn-primary">
+			    <input type="radio" name="speed" id="speed300" value="300"> 5 Minutes
+			  </label>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="image_list_counter">Loading...</div>
+			<div class="container image_list">
+				<div class="row"></div>
+			</div>
+		</div>
+	</div>
+
+		<div class="photo_menu row">
 			<div class="row">
 				<div class="filename col-xs-12"></div>
 			</div>

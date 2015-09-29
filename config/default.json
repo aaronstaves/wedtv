@@ -1,5 +1,5 @@
 {
 	"imageDir": "static/images",
 	"loglevel": "debug",
-	"interval": 6000
+	"interval": 5000
 }
