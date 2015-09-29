@@ -35,11 +35,26 @@ div.main_image_wrapper {
 
 
   -webkit-transition: opacity 1s ease-in-out;
+/*
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
+*/
 }
+
 
 .transparent {
 	opacity: 0;
+  -webkit-animation: slideshow 1s ease-in-out alternate;
+  -moz-animation:    slideshow 1s linear infinite;
+
+}
+
+@-webkit-keyframes slideshow {
+  0%    { bottom: -50%; }
+  100%  { bottom: -500%; }
+}
+@moz-keyframes slideshow {
+  0%    { left: -50%; }
+  100%  { left: -500%; }
 }
