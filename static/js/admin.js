@@ -32,7 +32,7 @@ function updateList (list){
 
 		$('.image_list .row').empty();
 		$.each( list, function(i, photo) {
-			var html = '<div data-filename="'+photo.filename+'" class="admin_photo col-xs-3"><img src="images/'+photo.filename+'" /></div>';
+			var html = '<div data-filename="'+photo.filename+'" class="admin_photo col-xs-3"><img src="images/tn/'+photo.filename+'" /></div>';
 			$('.image_list .row').append(html);
 		});
 		$('.image_list_counter').html( list.length + ' images' );
