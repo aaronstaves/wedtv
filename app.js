@@ -1,8 +1,9 @@
 var express = require('express');
 var app     = express();
-var config      = require('config');
-var http        = require('http').Server(app);
-var io          = require('socket.io')(http);
+var path    = require('path');
+var config  = require('config');
+var http    = require('http').Server(app);
+var io      = require('socket.io')(http);
 
 var SlideShow = require('./lib/slideShow');
 
@@ -13,7 +14,14 @@ app.get('/', function(req, res){
 app.get('/slidemin', function(req, res){
 	res.sendFile(__dirname + '/admin.html');
 });
+
+app.get('/images', function(req, res){
+	res.sendFile(__dirname + '/xxx.html');
+});
+console.log(__dirname + '/' + config.imageDir );
 app.use(express.static('static'));
+app.use('/images', express.static(config.imageDir));
+
 
 
 io.on('connection', function(socket) {
@@ -26,6 +34,6 @@ io.on('connection', function(socket) {
 var slideShow = new SlideShow({ io: io });
 slideShow.init();
 
-http.listen(3000, function(){
-	console.log('listening on *:3000');
+http.listen(config.port, function(){
+	console.log('listening on *:' + config.port);
 });

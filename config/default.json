@@ -1,5 +1,6 @@
 {
-	"imageDir": "static/images",
+	"port":     3000,
+	"imageDir": "/home/astaves/src/wedtv/static/images",
 	"loglevel": "debug",
 	"interval": 5000
 }
